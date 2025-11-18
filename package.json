@@ -1,6 +1,6 @@
 {
   "name": "my-nostr-client",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -8,9 +8,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "nostr-tools": "^2.6.0"        
+    "nostr-tools": "^1.17.0"
   },
   "devDependencies": {
-    "vite": "^5.3.0"               
-  }
+    "vite": "^4.5.14"
+  },
+  "description": "",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahrashed/nostr_karma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahrashed/nostr_karma/issues"
+  },
+  "homepage": "https://github.com/sarahrashed/nostr_karma#readme"
 }

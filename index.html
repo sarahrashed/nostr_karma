@@ -24,6 +24,52 @@
                 </div>
             </section>
 
+            <!-- Karma & Moderation Section -->
+<section class="karma-section">
+    <hr />
+    <h2>🧭 Karma Controls (MVP)</h2>
+
+    <div>
+        <label>Target user (npub or hex pubkey):</label>
+        <input id="karma-target" placeholder="npub1... or hex pubkey" style="width:100%;max-width:640px;">
+    </div>
+
+    <div style="margin-top:6px;">
+        <button id="karma-up">+ Upvote</button>
+        <button id="karma-down">− Downvote</button>
+        <input id="karma-stake" type="number" min="0" value="0" style="width:90px;margin-left:6px;">
+        <label>stake</label>
+        <label style="margin-left:8px;">PoW bits</label>
+        <input id="karma-pow" type="number" min="0" max="16" value="8" style="width:70px;">
+    </div>
+
+    <div style="margin-top:6px;">
+        <button id="karma-recompute">♻️ Recompute Karma</button>
+        <span id="karma-score" style="margin-left:10px;">karma: (unknown)</span>
+    </div>
+
+    <hr style="margin:16px 0;">
+
+    <h3>🚩 Reporting & Review</h3>
+    <div>
+        <label>Report event id:</label>
+        <input id="report-event" placeholder="event id (hex)" style="width:100%;max-width:640px;">
+        <input id="report-reason" placeholder="reason (e.g. harassment)" style="width:100%;max-width:640px;margin-top:6px;">
+        <button id="report-send" style="margin-top:6px;">Send Report</button>
+    </div>
+
+    <div style="margin-top:12px;">
+        <label>Review reported event id:</label>
+        <input id="review-event" placeholder="reported event id" style="width:100%;max-width:640px;">
+        <select id="review-decision" style="margin-top:6px;">
+            <option value="confirm">Confirm</option>
+            <option value="reject">Reject</option>
+        </select>
+        <button id="review-send" style="margin-left:6px;">Submit Review</button>
+    </div>
+</section>
+
+
             <!-- Compose Section -->
             <section class="compose-section">
                 <h2>✍️ Compose Note</h2>
@@ -34,6 +80,10 @@
             <!-- Feed Section -->
             <section class="feed-section">
                 <h2>📰 Global Feed</h2>
+                <button id="show-new" style="display:none;margin:8px 0; padding:6px 10px; border-radius:16px; border:1px solid #ddd; cursor:pointer;">
+                    Show new posts (0)
+                </button>
+
                 <div id="feed"></div>
             </section>
         </main>
